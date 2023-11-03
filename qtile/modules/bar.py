@@ -13,8 +13,8 @@ def power():
 
 def init_topBar():
     return [
-            Screen(top=bar.Bar(
-                [
+            Screen(
+                top=bar.Bar([
                     widget.Spacer(
                                 length=15,
                                 background='282738'
@@ -117,10 +117,12 @@ def init_topBar():
                                 format='{essid}',
                                 background='303446',
                     ),
+
                     widget.Spacer(
                                 length=5,
                                 background='303446'
                     ),
+
                     widget.UPowerWidget(
                                 background='303446',
                     ),
@@ -154,6 +156,7 @@ def init_topBar():
                                 background='282738'
                     ),
                   ],
+                
                 24,
                 border_color='#353446',
                 border_width=[0,0,0,0],
