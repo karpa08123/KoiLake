@@ -95,11 +95,13 @@ keys = [
 ############################### GROUPS #######################################
 groups = []
 
+groups_names=["1","2","3","4","5"]
+
 #group_labels = [">_", "@", "CHAT", "FILES", "EXTRA"]
 #group_labels = ["1", "2", "3", "4", "5"]
-#group_labels = ["󰘦 ", "󰖟 ", "󰚢 ", " ", " "]
+#group_labels = ["󰅨", "󰖟 ", "󰚢 ", " ", " "]
 group_labels = ["󰏃", "󰏃", "󰏃", "󰏃", "󰏃"]
-
+#group_labels = ["󰊠", "󰊠", "󰊠", "󰊠", "󰊠"]
 
 group_layouts = ["MonadTall", "MonadTall", "MonadTall", "MonadTall", "MonadTall"]
 
@@ -132,6 +134,7 @@ layouts = [
     layout.MonadTall(name='MonadTall', **layout_theme),
     layout.Max(name='Max'),
     layout.Floating(name='Floating', **layout_theme),
+    layout.Spiral(name='Spiral', **layout_theme),
 ]
 
 widget_defaults = dict(

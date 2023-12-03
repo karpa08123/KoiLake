@@ -110,7 +110,9 @@ def init_topBar():
 
                     widget.WiFiIcon(
                                 interface='wlan0',
-                                background='303446'
+                                background='303446',
+                                inactive_colour='303446',
+                                active_colour='CAA9E0'
                     ),
 
                     widget.Wlan (
@@ -123,8 +125,15 @@ def init_topBar():
                                 background='303446'
                     ),
 
-                    widget.UPowerWidget(
+                    widget.BatteryIcon(
+                                theme_path='~/.config/qtile/Assets/Battery/',
                                 background='303446',
+                                scale=1
+                    ),
+
+                    widget.Battery(
+                                background='303446',
+                                format='{percent:2.0%}',
                     ),
 
                     widget.Spacer(
@@ -133,7 +142,6 @@ def init_topBar():
                     ),
 
                     widget.Volume(
-                                
                                 background='303446',
                     ),
 
