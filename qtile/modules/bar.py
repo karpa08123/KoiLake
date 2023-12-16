@@ -10,6 +10,8 @@ from qtile_extras.widget.decorations import RectDecoration, PowerLineDecoration,
 def power():
     qtile.cmd_spawn("sh -c ~/.config/rofi/scripts/powermenu_t2")
 
+def batThresh():
+    qtile.cmd_spawn("sh -c ~/.config/rofi/scripts/charge.sh")
 
 def init_topBar():
     return [
@@ -128,12 +130,14 @@ def init_topBar():
                     widget.BatteryIcon(
                                 theme_path='~/.config/qtile/Assets/Battery/',
                                 background='303446',
-                                scale=1
+                                scale=1,
+                                mouse_callbacks={"Button1":batThresh},
                     ),
 
                     widget.Battery(
                                 background='303446',
                                 format='{percent:2.0%}',
+                                mouse_callbacks={"Button1":batThresh},
                     ),
 
                     widget.Spacer(

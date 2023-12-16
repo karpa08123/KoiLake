@@ -88,7 +88,9 @@ keys = [
         'Bluetooth': 'dmenu-bluetooth prompt',
         'Wifi On': 'nmcli radio wifi on',
         'Wifi Off': 'nmcli radio wifi off'
-        })))
+        }))),
+
+    Key([mod], 'n', lazy.spawn("gnome -characters"), desc="Emoji selector"),
 
 ]
 
